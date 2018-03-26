@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3857685D2669767ED52C0431 /* Pods_LifeSense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E81D2CE21394C3A08FDD29A /* Pods_LifeSense.framework */; };
 		4FEF48692068DA5D000AD462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEF48682068DA5D000AD462 /* AppDelegate.swift */; };
 		4FEF486B2068DA5D000AD462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEF486A2068DA5D000AD462 /* ViewController.swift */; };
 		4FEF486E2068DA5D000AD462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEF486C2068DA5D000AD462 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		4FEF48732068DA5D000AD462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEF48712068DA5D000AD462 /* LaunchScreen.storyboard */; };
 		4FEF487E2068DA5D000AD462 /* LifeSenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEF487D2068DA5D000AD462 /* LifeSenseTests.swift */; };
 		4FEF48892068DA5D000AD462 /* LifeSenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEF48882068DA5D000AD462 /* LifeSenseUITests.swift */; };
+		724F004D4D1A024871DFED4C /* Pods_LifeSenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1607007048E9C238BA272004 /* Pods_LifeSenseTests.framework */; };
+		CBC9B46CA2DBA9C015BA1C96 /* Pods_LifeSenseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACED2853E78B8CB45111943 /* Pods_LifeSenseUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1607007048E9C238BA272004 /* Pods_LifeSenseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSenseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F649F8B2068E04200D82D15 /* LifeSense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifeSense.entitlements; sourceTree = "<group>"; };
 		4FEF48652068DA5D000AD462 /* LifeSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEF48682068DA5D000AD462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FEF486A2068DA5D000AD462 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,14 @@
 		4FEF48842068DA5D000AD462 /* LifeSenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeSenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEF48882068DA5D000AD462 /* LifeSenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSenseUITests.swift; sourceTree = "<group>"; };
 		4FEF488A2068DA5D000AD462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E81D2CE21394C3A08FDD29A /* Pods_LifeSense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CE5CD84D6AA5C97F50930D2 /* Pods-LifeSenseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSenseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSenseUITests/Pods-LifeSenseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89F5F16683D5A0155241BB47 /* Pods-LifeSenseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSenseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSenseUITests/Pods-LifeSenseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92FD38D94A1B67FC83C545F8 /* Pods-LifeSenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSenseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSenseTests/Pods-LifeSenseTests.release.xcconfig"; sourceTree = "<group>"; };
+		AE8BA2581E39151D30B311E6 /* Pods-LifeSenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSenseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSenseTests/Pods-LifeSenseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CACED2853E78B8CB45111943 /* Pods_LifeSenseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSenseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA480E59083DAF629496CDC /* Pods-LifeSense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSense.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSense/Pods-LifeSense.release.xcconfig"; sourceTree = "<group>"; };
+		E4EFA44F45EA3E809E656C0C /* Pods-LifeSense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSense.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSense/Pods-LifeSense.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3857685D2669767ED52C0431 /* Pods_LifeSense.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724F004D4D1A024871DFED4C /* Pods_LifeSenseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC9B46CA2DBA9C015BA1C96 /* Pods_LifeSenseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +97,8 @@
 				4FEF487C2068DA5D000AD462 /* LifeSenseTests */,
 				4FEF48872068DA5D000AD462 /* LifeSenseUITests */,
 				4FEF48662068DA5D000AD462 /* Products */,
+				5B8F6B25836521FF594F41CC /* Pods */,
+				538CBF9CE006C07C519D32AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +115,7 @@
 		4FEF48672068DA5D000AD462 /* LifeSense */ = {
 			isa = PBXGroup;
 			children = (
+				4F649F8B2068E04200D82D15 /* LifeSense.entitlements */,
 				4FEF48682068DA5D000AD462 /* AppDelegate.swift */,
 				4FEF486A2068DA5D000AD462 /* ViewController.swift */,
 				4FEF486C2068DA5D000AD462 /* Main.storyboard */,
@@ -125,6 +144,29 @@
 			path = LifeSenseUITests;
 			sourceTree = "<group>";
 		};
+		538CBF9CE006C07C519D32AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E81D2CE21394C3A08FDD29A /* Pods_LifeSense.framework */,
+				1607007048E9C238BA272004 /* Pods_LifeSenseTests.framework */,
+				CACED2853E78B8CB45111943 /* Pods_LifeSenseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B8F6B25836521FF594F41CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4EFA44F45EA3E809E656C0C /* Pods-LifeSense.debug.xcconfig */,
+				CCA480E59083DAF629496CDC /* Pods-LifeSense.release.xcconfig */,
+				AE8BA2581E39151D30B311E6 /* Pods-LifeSenseTests.debug.xcconfig */,
+				92FD38D94A1B67FC83C545F8 /* Pods-LifeSenseTests.release.xcconfig */,
+				6CE5CD84D6AA5C97F50930D2 /* Pods-LifeSenseUITests.debug.xcconfig */,
+				89F5F16683D5A0155241BB47 /* Pods-LifeSenseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FEF488D2068DA5D000AD462 /* Build configuration list for PBXNativeTarget "LifeSense" */;
 			buildPhases = (
+				A20A2ABD326F517259DB8DF9 /* [CP] Check Pods Manifest.lock */,
 				4FEF48612068DA5D000AD462 /* Sources */,
 				4FEF48622068DA5D000AD462 /* Frameworks */,
 				4FEF48632068DA5D000AD462 /* Resources */,
+				435E9E422B6678F813429FB3 /* [CP] Embed Pods Frameworks */,
+				96C54640B25920D2976102EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FEF48902068DA5D000AD462 /* Build configuration list for PBXNativeTarget "LifeSenseTests" */;
 			buildPhases = (
+				4407DCB6CC78596B99B5B259 /* [CP] Check Pods Manifest.lock */,
 				4FEF48752068DA5D000AD462 /* Sources */,
 				4FEF48762068DA5D000AD462 /* Frameworks */,
 				4FEF48772068DA5D000AD462 /* Resources */,
+				7564778438127812DD5F3121 /* [CP] Embed Pods Frameworks */,
+				13F5B4C269351190E6E067B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FEF48932068DA5D000AD462 /* Build configuration list for PBXNativeTarget "LifeSenseUITests" */;
 			buildPhases = (
+				8CFD3394291F048FEBDC84DB /* [CP] Check Pods Manifest.lock */,
 				4FEF48802068DA5D000AD462 /* Sources */,
 				4FEF48812068DA5D000AD462 /* Frameworks */,
 				4FEF48822068DA5D000AD462 /* Resources */,
+				40E1E10918FAAF7CDC4E1B6F /* [CP] Embed Pods Frameworks */,
+				E211EB7F5EBF2517BECD5944 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +245,17 @@
 					4FEF48642068DA5D000AD462 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 					4FEF48782068DA5D000AD462 = {
 						CreatedOnToolsVersion = 9.2;
@@ -253,6 +315,183 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13F5B4C269351190E6E067B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSenseTests/Pods-LifeSenseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40E1E10918FAAF7CDC4E1B6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSenseUITests/Pods-LifeSenseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		435E9E422B6678F813429FB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LifeSense/Pods-LifeSense-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EAIntroView/EAIntroView.framework",
+				"${BUILT_PRODUCTS_DIR}/EARestrictedScrollView/EARestrictedScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/EZAudio/EZAudio.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MQTTKit/MQTTKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SCNetworkReachability/SCNetworkReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TPCircularBuffer/TPCircularBuffer.framework",
+				"${BUILT_PRODUCTS_DIR}/ios-ntp/ios_ntp.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EAIntroView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EARestrictedScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZAudio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MQTTKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCNetworkReachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPCircularBuffer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ios_ntp.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSense/Pods-LifeSense-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4407DCB6CC78596B99B5B259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSenseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7564778438127812DD5F3121 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSenseTests/Pods-LifeSenseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CFD3394291F048FEBDC84DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSenseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96C54640B25920D2976102EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LifeSense/Pods-LifeSense-resources.sh",
+				"${PODS_ROOT}/AWAREFramework/AWAREFramework/Assets/AWARE.xcdatamodeld",
+				"${PODS_CONFIGURATION_BUILD_DIR}/AWAREFramework/AWAREFramework.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AWARE.momd",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AWAREFramework.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSense/Pods-LifeSense-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A20A2ABD326F517259DB8DF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSense-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E211EB7F5EBF2517BECD5944 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSenseUITests/Pods-LifeSenseUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4FEF48612068DA5D000AD462 /* Sources */ = {
@@ -424,8 +663,10 @@
 		};
 		4FEF488E2068DA5D000AD462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EFA44F45EA3E809E656C0C /* Pods-LifeSense.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LifeSense/LifeSense.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FH352PYMNC;
 				INFOPLIST_FILE = LifeSense/Info.plist;
@@ -439,8 +680,10 @@
 		};
 		4FEF488F2068DA5D000AD462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA480E59083DAF629496CDC /* Pods-LifeSense.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LifeSense/LifeSense.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FH352PYMNC;
 				INFOPLIST_FILE = LifeSense/Info.plist;
@@ -454,6 +697,7 @@
 		};
 		4FEF48912068DA5D000AD462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE8BA2581E39151D30B311E6 /* Pods-LifeSenseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +715,7 @@
 		};
 		4FEF48922068DA5D000AD462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92FD38D94A1B67FC83C545F8 /* Pods-LifeSenseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +733,7 @@
 		};
 		4FEF48942068DA5D000AD462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CE5CD84D6AA5C97F50930D2 /* Pods-LifeSenseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +750,7 @@
 		};
 		4FEF48952068DA5D000AD462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F5F16683D5A0155241BB47 /* Pods-LifeSenseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

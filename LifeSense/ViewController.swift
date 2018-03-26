@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import AWAREFramework
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let delegate = UIApplication.shared.delegate as! AWAREDelegate
+        delegate.sharedAWARECore.sharedLocationManager.requestAlwaysAuthorization()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 
