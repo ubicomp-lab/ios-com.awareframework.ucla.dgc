@@ -14,8 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         let delegate = UIApplication.shared.delegate as! AWAREDelegate
-        delegate.sharedAWARECore.sharedLocationManager.requestAlwaysAuthorization()
+        
+        // delegate.sharedAWARECore.sharedLocationManager.requestAlwaysAuthorization()
+        delegate.sharedAWARECore.requestBackgroundSensing()
+        delegate.sharedAWARECore.requestNotification(UIApplication.shared)
+        
         
     }
 

@@ -21,35 +21,40 @@ class AppDelegate: AWAREDelegate {
            let manager = self.sharedAWARECore.sharedSensorManager {
             
             /////// Settings for data synching strategies //////////
-            study.setStudyInformationWithURL("https://api.awareframework.com/index.php/webservice/index/1553/ZDaTuBFymPPF")
+            study.setStudyURL("https://api.awareframework.com/index.php/webservice/index/1553/ZDaTuBFymPPF")
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.WEBSERVICE_SILENT, true);
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.WEBSERVICE_WIFI_ONLY, true);
-            study.setDataUploadStateInWifi(true)
+            study.setAutoDBSyncOnlyWifi(true)
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.WEBSERVICE_FALLBACK_NETWORK, 6); //after 6h fallback to 3G sync.
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.REMIND_TO_CHARGE, true);
+            study.setAutoDBSyncOnlyBatterChargning(true)
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_CLEAN_OLD_DATA, 1); //weekly basis
             study.setCleanOldDataType(cleanOldDataTypeWeekly)
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_WEBSERVICE, 60); //every 1h
-            study.setUploadIntervalWithMinutue(60)
+            study.setAutoDBSyncIntervalWithMinutue(60)
+            
+//            study.setAutoDBSyncIntervalWithMinutue(1)
+//            study.setMaximumNumberOfRecordsForDBSync(10)
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_SIGNIFICANT_MOTION, true); //we only want to log accelerometer data when there is movement
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_ESM, true); //we want to use the ESM functionality of AWARE
 
-            
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_ACCELEROMETER, true);
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_ACCELEROMETER, 200 * 1000);
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.THRESHOLD_ACCELEROMETER, 0.01); //changes need to be > 0.01 in each axis to log. Makes sensor less sensitive
-            let acceleroemter = Accelerometer.init(awareStudy: study, dbType: AwareDBTypeTextFile)
-            acceleroemter?.startSensor(withInterval: 0.2)
-            manager.addNewSensor(acceleroemter)
+            let acceleroemter = Accelerometer.init(awareStudy: study, dbType: AwareDBTypeSQLite)
+            acceleroemter?.setSensingIntervalWithSecond(0.2)
+            acceleroemter?.startSensor()
+            manager.add(acceleroemter);
+            
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_BAROMETER, true);
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_BAROMETER, 200 * 1000);
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.THRESHOLD_BAROMETER, 0.01); //changes need to be > 0.01 in each axis to log. Makes sensor less sensitive
-            let barometer = Barometer.init(awareStudy: study, dbType: AwareDBTypeCoreData)
-            barometer?.setBufferSize(10)
-            barometer?.startSensor(withInterval: 0.2)
-            manager.addNewSensor(barometer)
+            let barometer = Barometer.init(awareStudy: study, dbType: AwareDBTypeSQLite)
+            barometer?.setSensingIntervalWithSecond(0.2)
+            barometer?.startSensor()
+            manager.add(barometer)
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LIGHT, true);
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_LIGHT, 200 * 1000);
@@ -62,42 +67,43 @@ class AppDelegate: AWAREDelegate {
             //this is actually controlled by Google's algorithm. We want every 10 seconds, but this is not guaranteed. Recommended value is 60 s.
             // Aware.setSetting(getApplicationContext(), Settings.FREQUENCY_PLUGIN_GOOGLE_ACTIVITY_RECOGNITION, 60);
             // Aware.startPlugin(getApplicationContext(), "com.aware.plugin.google.activity_recognition"); //initialise plugin and set as active
-            let motion = IOSActivityRecognition.init(awareStudy: study, dbType: AwareDBTypeCoreData)
-            motion?.startSensor(withHistoryMode: CMMotionActivityConfidence.low, interval: 60)
-            manager.addNewSensor(motion)
+            let motion = IOSActivityRecognition.init(awareStudy: study, dbType: AwareDBTypeSQLite)
+            motion?.sensingInterval = 60;
+            motion?.startSensor()
+            
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, true); //includes usage, and foreground
             /** NOTE: iOS does not support this sensor */
 
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_BATTERY, true);
-            let battery = Battery.init(awareStudy: sharedAWARECore.sharedAwareStudy, dbType: AwareDBTypeCoreData)
+            let battery = Battery.init(awareStudy: sharedAWARECore.sharedAwareStudy, dbType: AwareDBTypeSQLite)
             battery?.startSensor()
-            manager.addNewSensor(battery)
+            manager.add(battery)
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_COMMUNICATION_EVENTS, true);
             /** NOTE: iOS does not support this sensor */
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_CALLS, true);
-            let call = Calls.init(awareStudy: study, dbType: AwareDBTypeCoreData)
+            let call = Calls.init(awareStudy: study, dbType: AwareDBTypeSQLite)
             call?.startSensor()
-            manager.addNewSensor(call)
+            manager.add(call)
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_MESSAGES, true);
             /** NOTE: iOS does not support this sensor */
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_SCREEN, true);
-            let screen = Screen.init(awareStudy: study, dbType: AwareDBTypeCoreData)
+            let screen = Screen.init(awareStudy: study, dbType: AwareDBTypeSQLite)
             screen?.startSensor()
-            manager.addNewSensor(screen)
+            manager.add(screen)
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_TOUCH, true);
             /** NOTE: iOS does not support this sensor */
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, true);
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_WIFI, 5); //every 5 minutes
-            let wifi = Wifi.init(awareStudy: study, dbType: AwareDBTypeCoreData)
+            let wifi = Wifi.init(awareStudy: study, dbType: AwareDBTypeSQLite)
             wifi?.startSensor(withInterval: 60 * 5)
-            manager.addNewSensor(wifi)
+            manager.add(wifi)
             
             //fused location
             // Aware.setSetting(getApplicationContext(), com.aware.plugin.google.fused_location.Settings.STATUS_GOOGLE_FUSED_LOCATION, true);
@@ -107,15 +113,23 @@ class AppDelegate: AWAREDelegate {
             // Aware.setSetting(getApplicationContext(), com.aware.plugin.google.fused_location.Settings.FALLBACK_LOCATION_TIMEOUT, 20); //if not moving for 20 minutes, new location captured
             // Aware.setSetting(getApplicationContext(), com.aware.plugin.google.fused_location.Settings.LOCATION_SENSITIVITY, 5); //need to move 5 meter to assume new location
             // Aware.startPlugin(getApplicationContext(), "com.aware.plugin.google.fused_location");
-            let location = FusedLocations.init(awareStudy: study, dbType: AwareDBTypeCoreData)
+            let location = FusedLocations.init(awareStudy: study, dbType: AwareDBTypeSQLite)
+            location?.intervalSec = 300
             location?.startSensor()
-            manager.addNewSensor(location)
+            manager.add(location)
             
-            // Aware.startPlugin(getApplicationContext(), "com.aware.plugin.studentlife.audio_final");
-            // there are no settings on this one... duty cycle is set to every 5 minutes, listen for 1 minute.
+            manager.createDBTablesOnAwareServer()
             
-            manager.createAllTables()
-            manager.startUploadTimer(withInterval: 60)
+//            manager.setDebugToAllSensors(true)
+//            manager.setDebugToAllStorage(true)
+//
+//            manager.setSyncProcessCallbackToAllSensorStorages { (sensorName, progress, error) in
+//                print(sensorName,progress);
+//            }
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
+//                manager.syncAllSensors()
+//            }
         }
         
         return true
