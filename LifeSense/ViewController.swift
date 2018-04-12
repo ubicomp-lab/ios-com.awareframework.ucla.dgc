@@ -18,9 +18,10 @@ class ViewController: UIViewController {
         let delegate = UIApplication.shared.delegate as! AWAREDelegate
         
         // delegate.sharedAWARECore.sharedLocationManager.requestAlwaysAuthorization()
-        delegate.sharedAWARECore.requestBackgroundSensing()
-        delegate.sharedAWARECore.requestNotification(UIApplication.shared)
+        AWARECore.shared()!.requestBackgroundSensing()
+        AWARECore.shared()!.requestNotification(UIApplication.shared)
         
+        // let accelerometer = Accelerometer(awareStudy: delegate.sharedAWARECore.sharedAwareStudy)
         
     }
 

@@ -17,9 +17,10 @@ class AppDelegate: AWAREDelegate {
         
         super.application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        if let study   = self.sharedAWARECore.sharedAwareStudy,
-           let manager = self.sharedAWARECore.sharedSensorManager {
-            
+        let study   = AWAREStudy.shared()
+        let manager = AWARESensorManager.shared()
+        
+        if let study = study, let manager = manager {
             /////// Settings for data synching strategies //////////
             study.setStudyURL("https://api.awareframework.com/index.php/webservice/index/1553/ZDaTuBFymPPF")
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.WEBSERVICE_SILENT, true);
@@ -45,7 +46,8 @@ class AppDelegate: AWAREDelegate {
             let acceleroemter = Accelerometer.init(awareStudy: study, dbType: AwareDBTypeSQLite)
             acceleroemter?.setSensingIntervalWithSecond(0.2)
             acceleroemter?.startSensor()
-            manager.add(acceleroemter);
+            acceleroemter?.threshold = 0.01;
+            manager.add(acceleroemter)
             
             
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_BAROMETER, true);
@@ -76,7 +78,7 @@ class AppDelegate: AWAREDelegate {
             /** NOTE: iOS does not support this sensor */
 
             // Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_BATTERY, true);
-            let battery = Battery.init(awareStudy: sharedAWARECore.sharedAwareStudy, dbType: AwareDBTypeSQLite)
+            let battery = Battery.init(awareStudy: study, dbType: AwareDBTypeSQLite)
             battery?.startSensor()
             manager.add(battery)
             
